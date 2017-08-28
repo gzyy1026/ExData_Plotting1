@@ -1,9 +1,9 @@
 library(datasets)
 
-household_power<-read.table("household_power_consumption.txt",sep=";",nrows=2075259,header=TRUE,stringsAsFactors=FALSE)
+household_power<-read.table("household_power_consumption.txt",sep=";",nrows=2075259,header=TRUE,stringsAsFactors=FALSE,dec=".")
 
 
-subs<-subset(household_power,Date=="2/1/2007"|Date=="2/2/2007")
+subs<-subset(household_power,Date=="1/2/2007"|Date=="2/2/2007")
 
 gap<-as.numeric(subs$Global_active_power)
 
